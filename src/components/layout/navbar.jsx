@@ -28,7 +28,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="w-nav-item">
-              <Link to="/" className="w-nav-links" onClick={closeMobileMenu}>
+              <Link to="Body" className="w-nav-links" onClick={closeMobileMenu}>
                 About Us
               </Link>
             </li>

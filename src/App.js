@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Gallery from "../src/pages/services/Gallery";
 import Users from "../src/pages/services/Users";
-
+import Body from "../../Project4/src/components/S-Component/Body";
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,7 @@ function App() {
           <Route path="/" exact component={Home} />
           {/* <Route path="/services" component={Gallery} /> */}
           <Route path="/services" component={Users} />
+          <Route path="/Body" component={Body} />
         </Switch>
         <Footer />
       </Router>
