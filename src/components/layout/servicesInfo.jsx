@@ -1,14 +1,18 @@
 import React from "react";
 import "./servicesinfo.css";
-import Img1 from "../../images/webApp.jpg";
 
 import { Link } from "react-router-dom";
 
 export default function Servicesbrief(params) {
+  let isLoggedIn = sessionStorage.getItem("UserStatus") === "loggedIn";
   return (
     <div className="w-brief-container">
       <div className="w-image-container">
-        <img className="w-image" src={Img1} alt=""></img>
+        <img
+          className="w-image"
+          src="https://www.scnsoft.com/blog-pictures/crm-pics/all-in-one-marketing-platforms.png"
+          alt=""
+        ></img>
       </div>
       <div className="w-content-container">
         <h3>Services</h3>
@@ -21,7 +25,14 @@ export default function Servicesbrief(params) {
           marketplace.
         </p>
         <button className="w-info-item btn-nav-item">
-          <Link to="/" className="w-info-links btn-info">
+          {/* <Link to="/" className="w-info-links btn-info">
+            Show More
+          </Link> */}
+          <Link
+            to={isLoggedIn ? "services" : "Login"}
+            className="w-info-links btn-info"
+            // onClick={closeMobileMenu}
+          >
             Show More
           </Link>
         </button>

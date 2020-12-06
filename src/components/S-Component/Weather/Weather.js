@@ -5,13 +5,15 @@ const Weather = (props) => {
   return (
     <div className="Weather-Container">
       <div className="Card-Weather">
-        <h1 className="Item">{/* {props.city},{props.country}*/}</h1>
+        <h1 className="Item">
+          {props.city},{props.country}
+        </h1>
         <h5 className="Item">
           <i className={`wi ${props.weatherIcon} display-1`} />
         </h5>
-        <h1 className="Item"> {/*{props.temp_celsius}*/}&deg;</h1>
+        <h1 className="Item"> {props.temp_celsius}&deg;</h1>
         {/** show max and in temp */}
-        {/*{minmaxTemp(props.temp_min, props.temp_max)}*/}
+        {minmaxTemp(props.temp_min, props.temp_max)}
       </div>
     </div>
   );

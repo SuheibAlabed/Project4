@@ -17,11 +17,11 @@ function Footer() {
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>About Us</h2>
-            <Link to="/sign-up">What we do</Link>
+            <a href="#WhatWeDo">What we do</a>
             <Link to="/">Testimonials</Link>
             <Link to="/">Our Team</Link>
           </div>
-          <div className="footer-link-items">
+          <div className="footer-link-items footer-link-items1">
             <h2>Videos</h2>
             <Link to="/">Watch Our Videos</Link>
           </div>
@@ -39,51 +39,51 @@ function Footer() {
           <div className="footer-logo">
             <Link to="/" className="social-logo">
               <img src={Logo} alt="Website Logo"></img>
-              ebSite Solutions
+              ebSoft
             </Link>
           </div>
-          <small className="website-rights">W-ebSite Solutions © 2020</small>
+          <small className="website-rights">W-ebSoft Solutions © 2020</small>
           <div className="social-icons">
-            <Link
+            <a
               className="social-icon-link facebook"
-              to="/"
+              href="https://web.facebook.com/monthertwaissi"
               target="_blank"
               aria-label="Facebook"
             >
               <i className="fab fa-facebook-f" />
-            </Link>
-            <Link
+            </a>
+            <a
               className="social-icon-link instagram"
-              to="/"
+              href="https://www.instagram.com/MonzerTwaissi/?fbclid=IwAR0eNnk_AEmk0KBSEaVlxY0TA5JJExN6mm8l2FXET9Ox9HeWxBpRnYrgbUQ"
               target="_blank"
               aria-label="Instagram"
             >
               <i className="fab fa-instagram" />
-            </Link>
-            <Link
+            </a>
+            <a
               className="social-icon-link youtube"
-              to="/"
+              href="https://www.youtube.com/watch?v=Q33KBiDriJY"
               target="_blank"
               aria-label="Youtube"
             >
               <i className="fab fa-youtube" />
-            </Link>
-            <Link
+            </a>
+            <a
               className="social-icon-link twitter"
-              to="/"
+              href="https://twitter.com/waedMD98?s=09"
               target="_blank"
               aria-label="Twitter"
             >
               <i className="fab fa-twitter" />
-            </Link>
-            <Link
+            </a>
+            <a
               className="social-icon-link twitter"
-              to="/"
+              href="https://www.linkedin.com/in/monther-twaissi/"
               target="_blank"
               aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

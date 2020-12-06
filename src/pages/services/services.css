@@ -42,6 +42,7 @@ ul {
 }
 .img-1:hover {
   transform: scale(1.05, 1.05);
+  transition: all 0.5s;
 }
 /* Utilities */
 .m-container {
@@ -190,7 +191,7 @@ ul {
   margin: 2rem 0;
 }
 .my-3 {
-  margin: 3rem 0;
+  margin: 0 15% 0 15%;
 }
 .my-4 {
   margin: 2rem 0 0 0;
@@ -215,7 +216,7 @@ ul {
   grid-gap: 1rem;
 }
 
-.btn {
+.btn-Services {
   display: inline-block;
   background: var(--light-color);
   color: #333;
@@ -330,7 +331,7 @@ ul {
 
 /* Forms */
 input {
-  margin: 1.2rem 0;
+  margin: 0.5rem 0;
 }
 
 .form-text {
@@ -346,10 +347,13 @@ input[type="date"],
 select,
 textarea {
   display: block;
-  width: 100%;
-  padding: 0.4rem;
+  width: 90%;
+  padding: 0.7rem;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border: none;
+  border-radius: 7px;
+  outline: none;
 }
 
 input[type="submit"],

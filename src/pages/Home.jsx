@@ -4,6 +4,7 @@ import Testimonials from "../components/layout/testimonals";
 // import Footer from "../components/layout/footer";
 import Servicesbrief from "../components/layout/servicesInfo";
 import Team from "../components/layout/team";
+import Youtupe from "../components/layout/youtubeapi/Api";
 export default function Home() {
   return (
     <div>
@@ -13,7 +14,8 @@ export default function Home() {
       <h1>Our Team</h1>
       <Team />
       <h1>Testimonials</h1>
-      <Testimonials />5
+      <Testimonials />
+      <Youtupe />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class UserItem extends Component {
   render() {
@@ -13,13 +14,15 @@ class UserItem extends Component {
         />
         <h3>{service}</h3>
         <div>
-          <a
-            href={html_url}
-            className="btn btn-primary btn-md my-4 round-border"
-            target="_blank"
-          >
-            More
-          </a>
+          <Link to={html_url}>
+            <a
+              href={html_url}
+              className="btn-Services btn-primary btn-md my-4 round-border fourth"
+              target="_blank"
+            >
+              Discuss My Software
+            </a>
+          </Link>
         </div>
       </div>
     );

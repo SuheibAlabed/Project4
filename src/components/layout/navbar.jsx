@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../images/Logo1.png";
 import "./navbar.css";
-import { Link } from "react-router-dom";
-
-export default function Navbar() {
+import { Link, withRouter } from "react-router-dom";
+// import { UseContext } from "../../UseContext";
+function Navbar(props) {
   const [click, setClick] = useState(false);
   const handelClick = () => {
     setClick(!click);
@@ -11,6 +11,22 @@ export default function Navbar() {
   const closeMobileMenu = () => {
     setClick(false);
   };
+
+  const LogOut = () => {
+    sessionStorage.setItem("UserStatus", "LoggedOut");
+
+    sessionStorage.removeItem("Phone");
+
+    // sessionStorage.removeItem("Service");
+  };
+  let isLoggedIn = sessionStorage.getItem("UserStatus") === "loggedIn";
+
+  useEffect(() => {
+    const removeListener = props.history.listen(() => {
+      isLoggedIn = sessionStorage.getItem("UserStatus") === "loggedIn";
+    });
+  }, []);
+
   return (
     <div>
       <nav className="w-navbar">
@@ -27,29 +43,42 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            <li className="w-nav-item">
-              <Link to="Body" className="w-nav-links" onClick={closeMobileMenu}>
-                About Us
-              </Link>
-            </li>
+
             <li className="w-nav-item">
               <Link
-                to="services"
+                to={isLoggedIn ? "services" : "Login"}
                 className="w-nav-links"
                 onClick={closeMobileMenu}
               >
                 Services
               </Link>
             </li>
-            <button className="w-nav-item btn-nav-item">
+            <li className="w-nav-item">
               <Link
-                to="/"
-                className="w-nav-links btn"
+                to={isLoggedIn ? "Body" : "Login"}
+                className="w-nav-links"
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                Profile
               </Link>
-            </button>
+            </li>
+            {isLoggedIn ? (
+              <li className="w-nav-item">
+                <button className="btn-NavBar">
+                  <Link to="Logout" onClick={(closeMobileMenu, LogOut)}>
+                    Logout
+                  </Link>
+                </button>
+              </li>
+            ) : (
+              <li className="w-nav-item">
+                <button className="btn-NavBar">
+                  <Link to="Login" onClick={closeMobileMenu}>
+                    LogIn
+                  </Link>
+                </button>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
@@ -57,3 +86,5 @@ export default function Navbar() {
   );
 }
 // export default Navbar;
+
+export default withRouter(Navbar);

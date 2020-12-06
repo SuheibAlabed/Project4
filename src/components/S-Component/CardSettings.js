@@ -1,8 +1,7 @@
-import { CardSettings } from "./DB";
 import "../S-Style/Body.scss";
 //import Weather from "./Weather/Weather";
 
-const Cards = () => {
+const Cards = ({ CardSettings }) => {
   const renderCard = (card, index) => {
     return (
       <div key={index}>
@@ -19,11 +18,27 @@ const Cards = () => {
             </div>
             <div className="Item1">
               <b>{card.Label3}</b>
-              <p>{card.Label3_Ans}</p>
+              <a
+                href="#"
+                style={{
+                  color: "#7d0dd3",
+                  textDecoration: "none",
+                }}
+              >
+                {card.Label3_Ans}
+              </a>
             </div>
             <div className="Item1">
               <b>{card.Label4}</b>
-              <p>{card.Label4_Ans}</p>
+              <a
+                href="#"
+                style={{
+                  color: "#7d0dd3",
+                  textDecoration: "none",
+                }}
+              >
+                {card.Label4_Ans}
+              </a>
             </div>
           </div>
         </div>

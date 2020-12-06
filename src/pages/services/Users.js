@@ -6,49 +6,62 @@ class Users extends Component {
   state = {
     users: [
       {
-        id: "1",
+        id: "Wep-App-Development",
         service: "Wep App Development",
         avatar_url:
           "https://www.guglytech.com/wp-content/uploads/2020/03/Web-Application-Development-GuglY-Tech.jpg",
-        html_url: "https://github.com/Monther-Twaissi",
+        html_url: "/details/Wep-App-Development",
       },
       {
-        id: "2",
-        service: "Web Application Consulting",
-        avatar_url:
-          "https://makemysite.gr/wp-content/uploads/2013/01/web_consulting.jpg",
-
-        html_url: "https://github.com/khadeejah-hamdan",
-      },
-      {
-        id: "3",
+        id: "Mobile-App-Development",
         service: "Mobile App Development",
+        avatar_url:
+          "https://www.scnsoft.com/blog-pictures/web-portals/website-vs-web-portal.png",
+
+        html_url: "/details/Mobile-App-Development",
+      },
+      {
+        id: "Complete-software-development-outsourcing",
+        service: "development outsourcing",
         avatar_url: "https://hackernoon.com/drafts/rf993ytl.png",
 
-        html_url: "https://github.com/ashraf-aljabari",
+        html_url: "/details/Complete-software-development-outsourcing",
       },
       {
-        id: "1",
-        service: "Wep App Development",
+        id: "Software-support-and-evolution",
+        service: "Software support",
         avatar_url:
           "https://www.guglytech.com/wp-content/uploads/2020/03/Web-Application-Development-GuglY-Tech.jpg",
-        html_url: "https://github.com/Monther-Twaissi",
+        html_url: "/details/Software-support-and-evolution",
       },
       {
-        id: "2",
-        service: "Web Application Consulting",
+        id: "Software-Consulting",
+        service: "Software Consulting",
         avatar_url:
           "https://makemysite.gr/wp-content/uploads/2013/01/web_consulting.jpg",
 
-        html_url: "https://github.com/khadeejah-hamdan",
+        html_url: "/details/Software-Consulting",
       },
       {
-        id: "3",
-        service: "Mobile App Development",
+        id: "Development-team-augmentation",
+        service: "Team augmentation",
         avatar_url: "https://hackernoon.com/drafts/rf993ytl.png",
-
-        html_url: "https://github.com/ashraf-aljabari",
+        html_url: "/details/Development-team-augmentation",
       },
+      // {
+      //   id: "7",
+      //   service: "Mobile App Development",
+      //   avatar_url: "https://hackernoon.com/drafts/rf993ytl.png",
+
+      //   html_url: "/details/6",
+      // },
+      // {
+      //   id: "8",
+      //   service: "Mobile App Development",
+      //   avatar_url: "https://hackernoon.com/drafts/rf993ytl.png",
+
+      //   html_url: "/details/6",
+      // },
     ],
   };
   render() {
@@ -69,5 +82,6 @@ const userStyle = {
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-evenly",
+  padding: "2rem",
 };
 export default Users;

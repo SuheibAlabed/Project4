@@ -29,6 +29,7 @@ body {
   align-items: center;
   flex-direction: column;
   .CardBody {
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     width: 42vmax;
@@ -45,6 +46,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
+    border-radius: 10px;
+    border-bottom: 1px solid #ccc;
   }
 }
 
@@ -55,9 +58,12 @@ body {
 }
 @media screen and (min-width: 481px) and (max-width: 786px) {
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1210px) {
+  .Card-Container {
+    grid-template-columns: 1fr;
+  }
 }
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
+@media screen and (min-width: 1020px) and (max-width: 1200px) {
 }
 @media screen and (min-width: 1201px) {
 }

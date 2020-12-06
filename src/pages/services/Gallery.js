@@ -24,42 +24,42 @@ const Gallery = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                src="https://www.scnsoft.com/blog-pictures/crm-pics/call-center-automation.png"
                 alt="First slide"
               />
               <MDBMask overlay="black-light" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Light mask</h3>
-              <p>First text</p>
+              {/* <h3 className="h3-responsive">Light mask</h3>
+              <p>First text</p> */}
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                src="https://www.scnsoft.com/blog-pictures/crm-pics/all-in-one-marketing-platforms.png"
                 alt="Second slide"
               />
               <MDBMask overlay="black-strong" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Strong mask</h3>
-              <p>Second text</p>
+              {/* <h3 className="h3-responsive">Strong mask</h3>
+              <p>Second text</p> */}
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                src="https://www.scnsoft.com/blog-pictures/web-portals/website-vs-web-portal.png"
                 alt="Third slide"
               />
               <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Slight Mast</h3>
-              <p>Third text</p>
+              {/* <h3 className="h3-responsive">Slight Mast</h3>
+              <p>Third text</p> */}
             </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>

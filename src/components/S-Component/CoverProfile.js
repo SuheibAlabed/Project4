@@ -70,7 +70,7 @@ class CoverProfile extends Component {
               </div>
               <img src={ProfileImg} alt="" />
             </div>
-            <h2>Suheib Alabed</h2>
+            <h2>{sessionStorage.getItem("Name")}</h2>
           </div>
         </div>
       </header>

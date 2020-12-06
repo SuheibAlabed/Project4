@@ -2,9 +2,19 @@
   position: relative;
   width: 25%;
 }
+.Scroll-Team-Container {
+  overflow-x: auto;
+}
+.TeamMember-Container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80rem;
+
+  margin: 0.5rem auto 10rem auto;
+}
 
 .image {
-  display: block;
+  display: inline-block;
   width: 75%;
   height: auto;
 }
@@ -12,11 +22,11 @@
 .overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 12%;
   right: 0;
-  background-color: #008cba;
+  background-color: #dadada;
   overflow: hidden;
-  width: 75%;
+  width: 76%;
   height: 0;
   transition: 0.5s ease;
 }

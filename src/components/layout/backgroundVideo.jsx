@@ -4,10 +4,10 @@ import "./bgVideo.css";
 
 export default function BackgroundVideo() {
   return (
-    <div className="w-vid-container">
+    <div className="w-vid-container ">
       <video src={Video} autoPlay loop muted></video>
       <h1>WEB DEVELOPMENT SOLUTIONS</h1>
-      <p>What Are You Waiting For?</p>
+      <p id="WhatWeDo">What Are You Waiting For?</p>
     </div>
   );
 }

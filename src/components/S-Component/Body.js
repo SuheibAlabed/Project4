@@ -4,6 +4,7 @@ import CoverProfile from "./CoverProfile";
 import "../S-Style/Body.scss";
 import "weather-icons/css/weather-icons.css";
 import Weather from "./Weather/Weather";
+import { getCardSettings } from "../../components/S-Component/DB";
 
 const API_key = "c1207017687be6dc35b2e0178798c49e";
 class Body extends Component {
@@ -64,26 +65,32 @@ class Body extends Component {
         this.setState({ icon: this.weatherIcon.Clouds });
     }
   }
-  /* `http://api.openweathermap.org/data/2.5/weather?q=${localStorage.getItem(
-        "City"
-      )}&appid=${API_key}` */
+
   getWeather = async () => {
-    const api_call = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=Amman&appid=${API_key}`
-    );
-    const response = await api_call.json();
-
-    console.log(response);
-
-    this.setState({
-      city: response.name,
-      // country: response.sys.country,
-      celsius: this.calCelsius(response.main.temp),
-      temp_max: this.calCelsius(response.main.temp_max),
-      temp_min: this.calCelsius(response.main.temp_min),
-      icon: this.weatherIcon.Thunderstorm,
-    });
-    this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
+    try {
+      const api_call = await fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=${sessionStorage.getItem(
+          "City"
+        )}&appid=${API_key}`
+      );
+      const response = await api_call.json();
+      console.log(response);
+      if (response.main) {
+        this.setState({
+          city: response.name,
+          // country: response.sys.country,
+          celsius: this.calCelsius(response.main.temp),
+          temp_max: this.calCelsius(response.main.temp_max),
+          temp_min: this.calCelsius(response.main.temp_min),
+          icon: this.weatherIcon.Thunderstorm,
+        });
+        this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
+      } else {
+        console.error("city is unknown");
+      }
+    } catch (e) {
+      console.error(e);
+    }
   };
   render() {
     return (
@@ -99,7 +106,7 @@ class Body extends Component {
           weatherIcon={this.state.icon}
         />
 
-        <CardSettings />
+        <CardSettings CardSettings={getCardSettings()} />
       </div>
     );
   }
